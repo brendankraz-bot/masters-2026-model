@@ -80,7 +80,12 @@ All 6 files complete and syntax-verified:
 
 Git repo initialized: 29 files committed (`feat: Masters 2026 live prediction model — full stack`).
 
-## Next: Wave 5 — Deploy (DO THIS NOW — R1 is TOMORROW)
+## Wave 5 — Deploy ✅ (partial)
+
+**GitHub repo:** https://github.com/brendankraz-bot/masters-2026-model (public, main branch)
+All 29 files pushed. Git remote: `origin` → GitHub.
+
+## Streamlit Cloud — STILL NEEDED (do before ~8am ET April 9)
 
 1. **Create GitHub repo:**
    ```bash
