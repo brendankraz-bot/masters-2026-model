@@ -67,24 +67,47 @@ Rory McIlroy       28.2%  Proj +2.1
 
 ---
 
-## Next: Wave 4 — UI (START HERE)
+## Wave 4 — UI ✅
 
-All 6 files are independent — launch in parallel:
+All 6 files complete and syntax-verified:
 
-- [ ] **W4.1** `app.py` — 5-tab Streamlit shell with 5-min auto-refresh during live rounds
-- [ ] **W4.2** `src/ui/leaderboard_tab.py` — live scores, projected day score, projected tournament total, field conditions
-- [ ] **W4.3** `src/ui/predictions_tab.py` — power rankings table (pre + live-adjusted), composite score breakdown, win % vs market
-- [ ] **W4.4** `src/ui/best_bets_tab.py` — ranked bets, edge %, confidence tier, odds, Kelly bet size, EV, bankroll tracker
-- [ ] **W4.5** `src/ui/matchup_tab.py` — player multi-select (2-3), round selector, weather display, Monte Carlo output
-- [ ] **W4.6** `src/ui/hole_analysis_tab.py` — per-hole historical scoring vs field avg, danger ratings, Amen Corner callout
+- [x] **W4.1** `app.py` — 5-tab shell, Masters green theme, auto-refresh meta tag on live days
+- [x] **W4.2** `src/ui/leaderboard_tab.py` — live scores, weather banner, projected day/total, model blend display
+- [x] **W4.3** `src/ui/predictions_tab.py` — power rankings, SG breakdown chart, model vs market edge
+- [x] **W4.4** `src/ui/best_bets_tab.py` — ranked bets, adjustable bankroll/edge threshold, confidence tiers, EV
+- [x] **W4.5** `src/ui/matchup_tab.py` — player multiselect, Monte Carlo results, win% donut + SG bar charts
+- [x] **W4.6** `src/ui/hole_analysis_tab.py` — 18-hole bar chart, Amen Corner callout, par-5 engine callout, full table
 
-After Wave 4, run: `streamlit run app.py` to verify all tabs load.
+Git repo initialized: 29 files committed (`feat: Masters 2026 live prediction model — full stack`).
 
-## Wave 5 — Deploy
-- [ ] Push to GitHub repo (create if needed)
-- [ ] Connect to Streamlit Cloud (share.streamlit.io)
-- [ ] Set DATAGOLF_API_KEY secret if API key obtained
-- [ ] Confirm public URL works before R1 tee-off April 9
+## Next: Wave 5 — Deploy (DO THIS NOW — R1 is TOMORROW)
+
+1. **Create GitHub repo:**
+   ```bash
+   # Option A: Install gh and use CLI
+   brew install gh && gh auth login
+   gh repo create masters-2026-model --public --push --source .
+   
+   # Option B: Manual — create repo at github.com, then:
+   git remote add origin https://github.com/YOUR_USERNAME/masters-2026-model.git
+   git push -u origin main
+   ```
+
+2. **Deploy to Streamlit Cloud:**
+   - Go to share.streamlit.io → "New app"
+   - Connect GitHub repo `masters-2026-model`
+   - Main file: `app.py`
+   - Python: 3.11
+   - No secrets needed (all APIs are public / CSV fallback)
+   - Click Deploy
+
+3. **Optional — DG API key:**
+   - If you have a Data Golf API key, add in Streamlit Cloud → Settings → Secrets:
+     ```toml
+     DATAGOLF_API_KEY = "your_key_here"
+     ```
+
+4. **Smoke test** the public URL before R1 tee-off (~8am ET April 9)
 
 ---
 
