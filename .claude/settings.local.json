@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:anthropic.skilljar.com)",
+      "WebSearch",
+      "WebFetch(domain:blog.stackademic.com)",
+      "WebFetch(domain:medium.com)"
+    ]
+  }
+}
