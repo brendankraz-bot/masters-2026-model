@@ -147,8 +147,8 @@ def render():
             "Proj Total":  proj_str,
             "Market Win%": market_str,
             "Edge":        edge_str,
-            "Age":         int(row["age"]) if row.get("age") else "—",
-            "OWGR":        int(row["owgr"]) if row.get("owgr") else "—",
+            "Age":         int(row["age"]) if (row.get("age") and str(row["age"]) not in ("nan", "None", "")) else "—",
+            "OWGR":        int(row["owgr"]) if (row.get("owgr") and str(row["owgr"]) not in ("nan", "None", "")) else "—",
         })
 
     df_display = pd.DataFrame(rows)
