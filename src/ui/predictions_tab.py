@@ -182,7 +182,7 @@ def render():
         except Exception:
             return ""
 
-    styled = df_display.style.applymap(_edge_style, subset=["Edge"]).applymap(
+    styled = df_display.style.map(_edge_style, subset=["Edge"]).map(
         _proj_style, subset=["Proj Total"]
     )
     st.dataframe(styled, use_container_width=True, hide_index=True, height=500)

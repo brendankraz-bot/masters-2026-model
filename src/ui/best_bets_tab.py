@@ -152,9 +152,9 @@ def render():
 
     styled = (
         df.style
-        .applymap(_style_edge, subset=["Edge"])
-        .applymap(_style_conf, subset=["Confidence"])
-        .applymap(_style_ev, subset=["EV"])
+        .map(_style_edge, subset=["Edge"])
+        .map(_style_conf, subset=["Confidence"])
+        .map(_style_ev, subset=["EV"])
     )
     st.dataframe(styled, use_container_width=True, hide_index=True)
 

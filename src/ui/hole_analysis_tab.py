@@ -217,8 +217,8 @@ def render():
 
     styled = (
         df.style
-        .applymap(_danger_color, subset=["Danger"])
-        .applymap(_vs_par_color, subset=["vs Par"])
+        .map(_danger_color, subset=["Danger"])
+        .map(_vs_par_color, subset=["vs Par"])
     )
     st.dataframe(styled, use_container_width=True, hide_index=True)
 

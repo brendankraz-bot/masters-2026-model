@@ -182,7 +182,7 @@ def render():
         except Exception:
             return ""
 
-    styled = df_display.style.applymap(_style_proj, subset=["Proj Total", "Proj Day"])
+    styled = df_display.style.map(_style_proj, subset=["Proj Total", "Proj Day"])
     st.dataframe(styled, use_container_width=True, hide_index=True, height=600)
 
     # ── Model blend note ──────────────────────────────────────────────────────
